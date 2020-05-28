@@ -1,5 +1,5 @@
 # greeny
-
+about
 # How to run
 1. Insatll docker
 2. Install docer-compose
@@ -11,3 +11,11 @@
 
 don't forget close docker after all
 $ docker-compose down
+
+# Technologies
+[Java 11]
+[Spring]
+[Maven]
+[Angular]
+[Docker]
+[Postresql]
