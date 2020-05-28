@@ -1,0 +1,45 @@
+# greenyMain:Agri_cultur3 
+# greeny port 5432
+
+version: '3'
+
+services:
+
+  #PostgreSQL Database for the application
+  database:
+    image: "postgres:9.6-alpine"
+    container_name: database
+    environment:
+      - POSTGRES_DB=greeny
+      - POSTGRES_USER=greenyMain
+      - POSTGRES_PASSWORD=Agri_cultur3
+    ports:
+      -  5432:5432
+    volumes:
+     - Greeny:/var/lib/postgresql/data
+
+     
+  springapi:
+    build: ./springapi
+    container_name: springapi
+    environment:
+      - DB_SERVER=database
+      - POSTGRES_DB=greeny
+      - POSTGRES_USER=greenyMain
+      - POSTGRES_PASSWORD=Agri_cultur3
+    ports:
+      - 8080:8080 
+    links:
+      - database
+      
+  angular:
+    build: ./angular
+    container_name: angular
+    ports: 
+      - 4200:80
+    links:
+      - springapi
+    
+
+volumes:
+  Greeny:
