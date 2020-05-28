@@ -13,9 +13,9 @@ don't forget close docker after all
 $ docker-compose down
 
 # Technologies
-[Java 11]()
-[Spring]()
-[Maven]()
-[Angular]()
-[Docker]()
-[Postresql]()
+* Java 11
+* Spring
+* Maven
+* Angular
+* Docker
+* Postresql
