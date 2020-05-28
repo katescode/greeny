@@ -1,0 +1,15 @@
+# idea
+.idea
+*.iws
+*.iml
+*.ipr
+
+# vs
+.vscode
+
+
+
+*.jar
+*.war
+*.log
+*.class
